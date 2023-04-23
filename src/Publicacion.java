@@ -10,7 +10,7 @@ public class Publicacion {
         this.nombre = name;
         this.fechaSubida = fechaSubida;
         this.cantidadMG = cantidadMG;
-        this.comentarios = null;
+        //this.comentarios = null;
     }
 
     public String getNombre() {
@@ -35,5 +35,14 @@ public class Publicacion {
 
     public void setCantidadMG(int cantidadMG) {
         this.cantidadMG = cantidadMG;
+    }
+
+    public void comentar(Comentario nuevoComentario){
+        comentarios.add(nuevoComentario);
+    }
+    public void leerComentarios(){
+        for (Comentario comentario: comentarios) {
+            System.out.println(comentario.toString());
+        }
     }
 }
